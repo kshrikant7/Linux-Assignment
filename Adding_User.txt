@@ -1,0 +1,10 @@
+-- Command to add new user -- 
+$sudo useradd username
+
+
+
+-- To add password to newly created user --
+$sudo passwd username
+
+
+- By default the newly created user will not have sudo persmission. 

@@ -1,0 +1,25 @@
+-- You can use umask command --
+
+$umask 0777
+
+
+- This is session specific -
+
+
+
+-- If you want to remove for a user, login into that user profile and open ~/.bashrc file --
+
+$sudo nano ~/.bashrc
+
+
+
+- Add following line at the EOF -
+
+umask 0777
+
+
+
+- By default the umask value will be 0022 or 0002 -
+
+- To check umask value -
+$umask

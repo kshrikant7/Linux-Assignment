@@ -1,0 +1,18 @@
+-- Command to find the Research.zip file -- 
+
+$find / -type f -iname "research.*" 2>/dev/null | grep -E "\.(zip|gz|tar|bz2|xz)$"
+
+
+
+
+-- Based on the file extension use the below mentioned command to unzip --
+
+.gz  -  $gunzip filename with path
+
+.zip  -  $unzip filename with path [(-d) destination path]
+
+.tar.gz  -  $tar -xzvf
+
+.tar.bz2  -  $tar -xjvf
+
+.tar.xz  -  $tar -xJvf

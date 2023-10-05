@@ -1,0 +1,87 @@
+-- Create a shell script to print the current time and save it to a file. You can create a file named 'showtime.sh' --
+
+$nano path/to/showtime.sh
+
+
+- Add the following content to the 'showtime.sh' -
+
+#----------------------------------------------
+
+#!/bin/bash
+while true; do
+    date "+%Y-%m-%d %H:%M:%S" >> ~/showtime.txt
+    sleep 60
+done
+
+#---------------------------------------------
+
+
+-- Give executable permission for showtime.sh file by following command --
+
+$chmod +x path/to/showtime.sh
+
+
+
+
+-- Create a systemd service unit file name 'showtime.service' in the '/etc/systemd/system/' directory --
+
+$nano /etc/systemd/system/showtime.service
+
+
+- Add the following content to the above file -
+
+#-------------------------------------------------
+
+[Unit]
+Description=Showtime Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/path/to/showtime.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+#-------------------------------------------------
+
+
+
+-- Reload systemd --
+
+$sudo systemctl daemon-reload
+
+
+
+-- Enable the 'showtime' service --
+
+$sudo systemctl enable showtime.service
+
+
+
+-- Start the 'showtime' service --
+
+$sudo systemctl start showtime.service
+
+
+
+-- Check the status of 'showtime' service --
+
+$sudo systemctl status showtime.service
+
+
+
+
+-- To see the contents of 'showtime.txt' file use any of the follow command --
+
+$cat ~/showtime.txt
+
+$nano ~/showtime.txt
+
+
+
+-- To truncate the 'showtime.txt' file --
+
+$ :> ~/showtime/txt
+

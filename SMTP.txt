@@ -1,0 +1,38 @@
+-- Install Postfix --
+$sudo apt install postfix
+
+
+-- Postfix Configuration --
+1. Internet Site
+2. Give  required mail name(example.com)
+3. Give required name(example)
+4. Ok
+5. No
+6. Ok
+7. Yes
+8. Ok
+9. Ok
+10. All
+
+
+
+- Edit /etc/postfix/main.cf (Optional, only if the mail sending process fails)
+
+$nano /etc/postfix/main.cf
+
+- Search for 'inet_interfaces = all' and change it to 'inet_interfaces = loopback-only' (ignore the quotes)
+
+
+
+
+-- Install Mail Utils --
+$apt install mailutils
+
+
+
+-- Command to send mail --
+$mail -s "Mail Subject" mail ID(example@gmail.com)
+
+cc is optional, can be left blank.
+
+Press Ctrl+d after typing the mail body to exit.

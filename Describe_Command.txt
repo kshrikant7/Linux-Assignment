@@ -7,19 +7,3 @@ ls -l "$PWD"
 
 -- Give executable permission to describe file -- 
 $chmod +x /usr/local/bin/describe
-
-
-
--- Create new file named environment --
-$sudo nano /etc/environment
-
-
-
--- Add this to environment file --
-PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/local/games:/usr/games"
-
-
-
-
-
-

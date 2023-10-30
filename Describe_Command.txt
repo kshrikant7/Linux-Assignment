@@ -3,7 +3,7 @@ $nano /usr/local/bin/describe
 
 -- Add this in describe file --
 #!/bin/bash
-ls -l "$PWD"
+ls -l
 
 -- Give executable permission to describe file -- 
 $chmod +x /usr/local/bin/describe

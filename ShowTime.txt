@@ -10,7 +10,7 @@ $nano path/to/showtime.sh
 #!/bin/bash
 while true; do
     date "+%Y-%m-%d %H:%M:%S" >> ~/showtime.txt
-    sleep 60
+    sleep 10
 done
 
 #---------------------------------------------

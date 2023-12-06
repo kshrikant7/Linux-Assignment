@@ -3,6 +3,7 @@
 $find / -type f -iname "research.*" 2>/dev/null | grep -E "\.(zip|gz|tar|bz2|xz)$"
 
 
+$find . -name "research.*" -exec sh -c 'gunzip -d "{}"' \; 2>/dev/null
 
 
 -- Based on the file extension use the below mentioned command to unzip --
